@@ -1,54 +1,112 @@
-# React + TypeScript + Vite
+🎉 Calculadora de Propinas y Consumo
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Una aplicación web sencilla para calcular el consumo de un pedido y la propina asociada, construida con **React**, **TypeScript**, **Vite** y **Tailwind CSS**. Este proyecto forma parte de un curso de Udemy y demuestra el manejo de estado con `useReducer`, componentes reutilizables y estilos con Tailwind. citeturn1view0turn3view0
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🛠️ Características
 
-## Expanding the ESLint configuration
+- 🍽️ **Selección de productos**: Añade elementos del menú al pedido con un solo clic.
+- 🧾 **Gestión de pedido**: Visualiza el detalle del consumo, cantidad por artículo y elimina ítems según se necesite.
+- 💸 **Propinas dinámicas**: Elige entre varias opciones de porcentaje (10%, 20%, 50%) y calcula automáticamente el importe de la propina.
+- 📊 **Cálculo de totales**: Muestra el subtotal, el monto de la propina y el total a pagar en tiempo real.
+- 🔄 **Reinicio rápido**: Botón para limpiar el pedido y restablecer la propina. citeturn19view0turn21view0
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+🛠️ Tecnologías Utilizadas
+
+- ⚛️ **React 19** + **React DOM** para la interfaz de usuario. citeturn25view0
+- 🔷 **TypeScript** para tipado estático y seguridad de tipos. citeturn25view0
+- 🚀 **Vite** como bundler rápido y entorno de desarrollo con HMR. citeturn1view0
+- 🎨 **Tailwind CSS** + **@tailwindcss/vite** para estilos utilitarios y configuración simple. citeturn25view0
+- 🛡️ **ESLint** y **eslint-plugin-react-hooks** para garantizar calidad y consistencia en el código. citeturn25view0
+
+---
+
+📂 Estructura de Directorios
+
+```markdown
+public/
+├─ index.html
+
+src/
+├─ components/
+│ ├─ Header.tsx
+│ ├─ MenuItem.tsx
+│ ├─ OrderContents.tsx
+│ ├─ OrderTotals.tsx
+│ └─ TipPorcentageForm.tsx
+├─ data/
+│ └─ menuItems.ts
+├─ helpers/
+│ └─ formatCurrency.ts
+├─ model/
+│ ├─ MenuItemsI.ts
+│ └─ OrderI.ts
+├─ reducers/
+│ └─ orderReducer.ts
+├─ App.tsx
+├─ main.tsx
+└─ index.css
+
+package.json
+tsconfig.json
+vite.config.ts
+eslint.config.js
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+🚀 Instalación y Uso
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+1. **Clonar el repositorio**
+
+   ```bash
+   git clone git@github.com:b4dow/calculadora-propinas.git
+   cd calculadora-propinas
+   ```
+
+2. **Instalar dependencias**
+
+   ```bash
+   npm install
+   # o con Bun
+   bun install
+   ```
+
+3. **Levantar el servidor de desarrollo**
+
+   ```bash
+   npm run dev
+   ```
+
+4. **Construir para producción**
+
+   ```bash
+   npm run build
+   ```
+
+5. **Vista previa de producción**
+
+   ```bash
+   npm run preview
+   ```
+
+---
+
+## 🤝 Contribuciones
+
+¡Las contribuciones son bienvenidas! Si encuentras un error o tienes una mejora, abre un **issue** o envía un **pull request**.
+
+---
+
+## 🎖️ Créditos
+
+- **Autor**: b4dow
+- **Curso base**: Udemy - React y TypeScript - La Guía Completa Creando +10 Proyectos
+
+---
+
+📄 Licencia
+Este proyecto está bajo la licencia MIT.
