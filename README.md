@@ -1,6 +1,6 @@
 🎉 Calculadora de Propinas y Consumo
 
-Una aplicación web sencilla para calcular el consumo de un pedido y la propina asociada, construida con **React**, **TypeScript**, **Vite** y **Tailwind CSS**. Este proyecto forma parte de un curso de Udemy y demuestra el manejo de estado con `useReducer`, componentes reutilizables y estilos con Tailwind. citeturn1view0turn3view0
+Una aplicación web sencilla para calcular el consumo de un pedido y la propina asociada, construida con **React**, **TypeScript**, **Vite** y **Tailwind CSS**. Este proyecto forma parte de un curso de Udemy y demuestra el manejo de estado con `useReducer`, componentes reutilizables y estilos con Tailwind.
 
 ---
 
